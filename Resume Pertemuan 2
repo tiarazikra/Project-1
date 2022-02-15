@@ -1,0 +1,61 @@
+A.	Introduction and Instalation
+Versioning (Version Control) berfungsi untuk mengatur versi dari source code program. Karena biasanya dalam melakukan coding terdapat berbagai revisi yang bertujuan untuk mengembangkan program itu sendiri.
+Alat – alat yang digunakan dalam versioning, adalah sebagai berikut:
+•	Version Control System (VCS)
+•	Source Code Manager (SCM)
+•	Revision Control System (RCS)
+Sejarah dari Version Control System
+•	Single User, bersifat localized sehingga pekerjaannya masih terpusat pada satu user saja
+•	Centralized, komunikasi dari antar user sudah terjalin namun masih terpusat sehingga jika terjadi gangguan maka seluruh aktivitas dari usernya juga ikut mengalami gangguan
+•	Distributed, penyempurnaan dari centralized control system karena tiap usernya tetap masih beraktivitas di local-nya walaupun server utamanya sedang mengalami gangguan. Git hadir pada masa ini, yaitu pada tahun 2005 yang diciptakan oleh Linus Torvalds.
+
+
+B.	Setting up and Push
+Konsep The Staging Area:
+ 
+1.	Working Directory, merupakan file tempat kita melakukan pekerjaan
+
+2.	Staging Area, area yang menyimpan informasi mengenai data mana saja yang akan masuk ke dalam commit berikutnya
+
+3.	Repository, tempat yang menyimpan Folders & Files projek kita dan History perubahan dari file yang ada di repository tersebut
+
+ 
+Beberapa perintah dasar git:
+•	git clone: untuk membuat salinan repository local 
+•	git add: untuk menambahkan file baru ke staging area
+•	git commit: untuk menyimpan perubahan yang dilakukan
+•	git push: untuk mengirimkan file yang sudah di-commit ke repository
+•	git diff: untuk mengetahui perubahan pada file yang diedit
+•	git stash: untuk menyimpan file yang diubah, sehingga dapat dikembalikan pada perubahan yang dilakukan
+•	git pull: untuk mengambil commit terbaru lalu otomatis menggabungkan dengan branch yang aktif
+•	git fetch: untuk mengambil commit tanpa menggabungkan.
+
+C.	Branch and Conflic
+Branches berfungsi untuk melindungi main projek kita.
+Beberapa perintah untuk branch:
+•	git branch –list : untuk melihat seluruh branch pada projek kita
+•	git branch <branch> : untuk membuat branch baru dengan nama <branch>
+•	git branch -D <branch> : untuk menghapus branch <branch>
+•	git branch -a : untuk me-list branch remote
+Biasanya setelah membuat beberapa branch akan ada branch yang ingin kita gabungkan atau merge, maka dari itu akan memanfaat perintah berikut:
+•	git checkout master : untuk pindah ke branch master
+•	git merge new-feature : untuk menggabungkan branch new-feature dengan branch master
+•	git branch -d new-feature : untuk menghapus branch new-feature
+
+ 
+Pull Request merupakan sebuah fitur yang bisa digunakan untuk berkontribusi terhadap repository yang sudah ada, langkah – langkahnya sebagai berikut:
+1.	Buka repository yang diinginkan
+2.	Klik fork
+3.	Klik Clone or Download
+4.	Kemudian lakukan cloning seperti biasanya
+5.	Buat perubahan sesuai dengan keinginan kita
+6.	Kemudian kita lakukan commit dan push file-nya ke github
+7.	Menunggu pemilik repository mengapproved hasil revisi kita
+
+Cara mengoptimalisasi workflow kita dengan GitHub atau GitLab
+1.	Membuat branch development dari branch master
+2.	Menghindari mengubah langsung di branch development, maka buatlah beberapa branch feature
+3.	Merge branch feature hanya ke branch development
+4.	Merge branch development ke branch master Ketika seluruh projek sudah benar – benar selesai.
+ 
+
